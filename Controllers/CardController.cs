@@ -35,7 +35,7 @@ public class CardController : ControllerBase
     [HttpPost]
     [SwaggerOperation(
         Summary     = "Register a new card",
-        Description = "Creates a new Card with initial load and returns its details."
+        Description = "Creates a new Card with initial load and returns its details. Card Types: 0 = TransportCard | 1 = DiscountedTransportCard // Discount Card Types: 0 = SeniorCitizenCard | 1 = PwdIdCard"
     )]
     [ProducesResponseType(typeof(RegisterCardResponseDto), StatusCodes.Status201Created)]
     [ProducesResponseType(typeof(ValidationProblemDetails),  StatusCodes.Status400BadRequest)]
